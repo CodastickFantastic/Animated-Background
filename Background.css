@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99vw;
+  height: 100vh;
+  min-width: 1020px;
+  z-index: 1;
+}
+
+path {
+  stroke: #d4d4d4;
+  stroke-width: 2;
+  animation: color-out 2s;
+}
+
+path:hover {
+  animation: color-in 1s;
+  stroke: #4490b0;
+}
+
+.changeColor {
+  stroke: red;
+}
+
+@keyframes color-in {
+  from {
+    stroke: #d4d4d4;
+  }
+  to {
+    stroke: #4490b0;
+    transform: translate(10, 10);
+    /* transform: scale(1.02); */
+  }
+}
+
+@keyframes color-out {
+  from {
+    stroke: #4490b0;
+  }
+  to {
+    stroke: #d4d4d4;
+    transform: scale(1);
+  }
+}
+
+#scroll-container {
+  /* position: relative; */
+  width: 100%;
+  /* top: 0;
+  left: 0; */
+  overflow: auto;
+  height: 2000px;
+  z-index: 0;
+}
+
+.blue-container {
+  /* background: rgb(68,144,176); */
+  background: radial-gradient(
+    circle,
+    rgba(68, 144, 176, 0.9) 10%,
+    rgba(36, 65, 81, 0.85) 70%
+  );
+  height: 500px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.transparent-container {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.transparent-container h2 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.transparent-container .center {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+}
+
+.transparent-container .center .product {
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 32%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
+  pointer-events: all;
+}
+
+.transparent-container .center .product img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.transparent-container .center .product img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.first-plan-container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  /* background: green; */
+}
+
+.first-plan-container .left {
+  color: white;
+  text-shadow: 2px 2px #000000;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+
+.first-plan-container h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.first-plan-container h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 1.4rem;
+}
+
+.first-plan-container p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+}
+
+.first-plan-container img {
+  position: relative;
+  width: 500px;
+  z-index: 2;
+  object-fit: contain;
+}
